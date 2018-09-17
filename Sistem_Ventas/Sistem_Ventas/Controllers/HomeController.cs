@@ -14,7 +14,7 @@ namespace Sistem_Ventas.Controllers
     {
         public HomeController(IServiceProvider serviceProvider)
         {
-            CreateRoles(serviceProvider);
+            //CreateRoles(serviceProvider);
         }
         public IActionResult Index()
         {
@@ -62,7 +62,7 @@ namespace Sistem_Ventas.Controllers
                         await roleMananger.CreateAsync(new IdentityRole(item));
                     }
                 }
-                var user = await userManager.FindByIdAsync("89f51da7-0d74-406c-86ad-ff09257e2c53");
+                var user = await userManager.FindByIdAsync("590586a7-f286-4539-ad1b-1e1dbb0cebe2");
                 await userManager.AddToRoleAsync(user, "Admin");
             }
             catch (Exception ex)
